@@ -13,13 +13,19 @@ struct PagingListView: View {
     
     var body: some View {
         ScrollView(showsIndicators: false) {
-            LazyVStack(alignment: .leading, spacing: .zero) {
+            LazyVStack(alignment: .center, spacing: .zero) {
                 ForEach(viewModel.posts) { post in
                     ItemPostView(post: post).onAppear {
                         if viewModel.posts.last == post {
                             viewModel.fetchPosts(page: viewModel.page)
                         }
                     }
+                }
+                if !viewModel.hasReachedMax {
+                    ProgressView()
+                        .progressViewStyle(.circular)
+                        .controlSize(.large)
+                        .tint(.teal)
                 }
             }
         }

@@ -33,6 +33,8 @@ public struct MainPagingView: View {
                 Spacer()
             }
             .padding()
+            .navigationTitle("Infinite Scroll")
+            .navigationBarTitleDisplayMode(.inline)
             .navigationDestination(for: AppRoute.self) { destination in
                 destination.view
             }
