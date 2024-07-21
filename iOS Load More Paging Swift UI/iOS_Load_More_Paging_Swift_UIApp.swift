@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct iOS_Load_More_Paging_Swift_UIApp: App {
+    
+    @StateObject private var appNavStore = AppNavigationStore()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainPagingView()
+                .environmentObject(appNavStore)
         }
     }
 }

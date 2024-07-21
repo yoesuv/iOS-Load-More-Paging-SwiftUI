@@ -7,18 +7,36 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB0D73A02C4B9DBE0072F7F3 /* ItemPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0D739F2C4B9DBE0072F7F3 /* ItemPostView.swift */; };
 		AB4549C42C440D0D00D6C05F /* iOS_Load_More_Paging_Swift_UIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4549C32C440D0D00D6C05F /* iOS_Load_More_Paging_Swift_UIApp.swift */; };
-		AB4549C62C440D0D00D6C05F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4549C52C440D0D00D6C05F /* ContentView.swift */; };
+		AB4549C62C440D0D00D6C05F /* MainPagingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4549C52C440D0D00D6C05F /* MainPagingView.swift */; };
 		AB4549C82C440D0F00D6C05F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB4549C72C440D0F00D6C05F /* Assets.xcassets */; };
 		AB4549CB2C440D0F00D6C05F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB4549CA2C440D0F00D6C05F /* Preview Assets.xcassets */; };
+		AB51F8702C48BAB70059A485 /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB51F86F2C48BAB70059A485 /* PostModel.swift */; };
+		AB51F8732C48BB930059A485 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB51F8722C48BB930059A485 /* NetworkService.swift */; };
+		AB51F8762C48BE930059A485 /* PagingListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB51F8752C48BE930059A485 /* PagingListViewModel.swift */; };
+		AB51F8792C48C2140059A485 /* AppNavigationStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB51F8782C48C2140059A485 /* AppNavigationStore.swift */; };
+		AB51F87C2C48CA920059A485 /* PagingListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB51F87B2C48CA920059A485 /* PagingListView.swift */; };
+		AB51F87E2C48CADC0059A485 /* PagingGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB51F87D2C48CADC0059A485 /* PagingGridView.swift */; };
+		AB51F8802C48CB730059A485 /* AppRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB51F87F2C48CB730059A485 /* AppRoute.swift */; };
+		AB9A73B92C48B9BE007FE153 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = AB9A73B82C48B9BE007FE153 /* Alamofire */; };
+		AB9A73BB2C48B9BE007FE153 /* AlamofireDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = AB9A73BA2C48B9BE007FE153 /* AlamofireDynamic */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AB0D739F2C4B9DBE0072F7F3 /* ItemPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemPostView.swift; sourceTree = "<group>"; };
 		AB4549C02C440D0D00D6C05F /* iOS Load More Paging Swift UI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS Load More Paging Swift UI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB4549C32C440D0D00D6C05F /* iOS_Load_More_Paging_Swift_UIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_Load_More_Paging_Swift_UIApp.swift; sourceTree = "<group>"; };
-		AB4549C52C440D0D00D6C05F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		AB4549C52C440D0D00D6C05F /* MainPagingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPagingView.swift; sourceTree = "<group>"; };
 		AB4549C72C440D0F00D6C05F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AB4549CA2C440D0F00D6C05F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		AB51F86F2C48BAB70059A485 /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
+		AB51F8722C48BB930059A485 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		AB51F8752C48BE930059A485 /* PagingListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagingListViewModel.swift; sourceTree = "<group>"; };
+		AB51F8782C48C2140059A485 /* AppNavigationStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigationStore.swift; sourceTree = "<group>"; };
+		AB51F87B2C48CA920059A485 /* PagingListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagingListView.swift; sourceTree = "<group>"; };
+		AB51F87D2C48CADC0059A485 /* PagingGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagingGridView.swift; sourceTree = "<group>"; };
+		AB51F87F2C48CB730059A485 /* AppRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRoute.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +44,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB9A73B92C48B9BE007FE153 /* Alamofire in Frameworks */,
+				AB9A73BB2C48B9BE007FE153 /* AlamofireDynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,8 +71,13 @@
 		AB4549C22C440D0D00D6C05F /* iOS Load More Paging Swift UI */ = {
 			isa = PBXGroup;
 			children = (
+				AB51F87A2C48CA730059A485 /* Views */,
+				AB51F8772C48C1F50059A485 /* Routes */,
+				AB51F8742C48BE620059A485 /* ViewModels */,
+				AB51F8712C48BB6F0059A485 /* Services */,
+				AB51F86E2C48BA990059A485 /* Models */,
 				AB4549C32C440D0D00D6C05F /* iOS_Load_More_Paging_Swift_UIApp.swift */,
-				AB4549C52C440D0D00D6C05F /* ContentView.swift */,
+				AB4549C52C440D0D00D6C05F /* MainPagingView.swift */,
 				AB4549C72C440D0F00D6C05F /* Assets.xcassets */,
 				AB4549C92C440D0F00D6C05F /* Preview Content */,
 			);
@@ -65,6 +90,49 @@
 				AB4549CA2C440D0F00D6C05F /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		AB51F86E2C48BA990059A485 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AB51F86F2C48BAB70059A485 /* PostModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		AB51F8712C48BB6F0059A485 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				AB51F8722C48BB930059A485 /* NetworkService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		AB51F8742C48BE620059A485 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				AB51F8752C48BE930059A485 /* PagingListViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		AB51F8772C48C1F50059A485 /* Routes */ = {
+			isa = PBXGroup;
+			children = (
+				AB51F8782C48C2140059A485 /* AppNavigationStore.swift */,
+				AB51F87F2C48CB730059A485 /* AppRoute.swift */,
+			);
+			path = Routes;
+			sourceTree = "<group>";
+		};
+		AB51F87A2C48CA730059A485 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AB51F87B2C48CA920059A485 /* PagingListView.swift */,
+				AB51F87D2C48CADC0059A485 /* PagingGridView.swift */,
+				AB0D739F2C4B9DBE0072F7F3 /* ItemPostView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +151,10 @@
 			dependencies = (
 			);
 			name = "iOS Load More Paging Swift UI";
+			packageProductDependencies = (
+				AB9A73B82C48B9BE007FE153 /* Alamofire */,
+				AB9A73BA2C48B9BE007FE153 /* AlamofireDynamic */,
+			);
 			productName = "iOS Load More Paging Swift UI";
 			productReference = AB4549C02C440D0D00D6C05F /* iOS Load More Paging Swift UI.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +183,9 @@
 				Base,
 			);
 			mainGroup = AB4549B72C440D0D00D6C05F;
+			packageReferences = (
+				AB9A73B72C48B9BE007FE153 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = AB4549C12C440D0D00D6C05F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,7 +212,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB4549C62C440D0D00D6C05F /* ContentView.swift in Sources */,
+				AB51F87C2C48CA920059A485 /* PagingListView.swift in Sources */,
+				AB4549C62C440D0D00D6C05F /* MainPagingView.swift in Sources */,
+				AB51F8802C48CB730059A485 /* AppRoute.swift in Sources */,
+				AB0D73A02C4B9DBE0072F7F3 /* ItemPostView.swift in Sources */,
+				AB51F8792C48C2140059A485 /* AppNavigationStore.swift in Sources */,
+				AB51F8702C48BAB70059A485 /* PostModel.swift in Sources */,
+				AB51F8762C48BE930059A485 /* PagingListViewModel.swift in Sources */,
+				AB51F8732C48BB930059A485 /* NetworkService.swift in Sources */,
+				AB51F87E2C48CADC0059A485 /* PagingGridView.swift in Sources */,
 				AB4549C42C440D0D00D6C05F /* iOS_Load_More_Paging_Swift_UIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -352,6 +435,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AB9A73B72C48B9BE007FE153 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.9.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AB9A73B82C48B9BE007FE153 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AB9A73B72C48B9BE007FE153 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		AB9A73BA2C48B9BE007FE153 /* AlamofireDynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AB9A73B72C48B9BE007FE153 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = AlamofireDynamic;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AB4549B82C440D0D00D6C05F /* Project object */;
 }
