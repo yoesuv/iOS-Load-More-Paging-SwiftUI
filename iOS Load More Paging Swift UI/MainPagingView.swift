@@ -16,14 +16,14 @@ public struct MainPagingView: View {
             VStack(spacing: .zero) {
                 Spacer()
                 Button(action: {
-                    appNavStore.path.append(AppRoute.pagingList)
+                    appNavStore.navigate(to: .pagingList)
                 }, label: {
                     Text("Pagination List")
                         .padding()
                         .overlay(RoundedRectangle(cornerRadius: 8).stroke(lineWidth: 1))
                 })
                 Button(action: {
-                    appNavStore.path.append(AppRoute.pagingGrid)
+                    appNavStore.navigate(to: .pagingGrid)
                 }, label: {
                     Text("Pagination Grid")
                         .padding()
@@ -35,8 +35,13 @@ public struct MainPagingView: View {
             .padding()
             .navigationTitle("Infinite Scroll")
             .navigationBarTitleDisplayMode(.inline)
-            .navigationDestination(for: AppRoute.self) { destination in
-                destination.view
+            .navigationDestination(for: AppRoute.self) { route in
+                switch route {
+                case .pagingList:
+                    PagingListView()
+                case .pagingGrid:
+                    PagingGridView()
+                }
             }
         }
     }

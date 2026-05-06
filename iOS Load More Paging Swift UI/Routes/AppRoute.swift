@@ -7,18 +7,7 @@
 
 import SwiftUI
 
-public enum AppRoute: Hashable {
+enum AppRoute: Hashable {
     case pagingList
     case pagingGrid
-    
-    @ViewBuilder
-    var view: some View {
-        switch self {
-        case .pagingList:
-            PagingListView()
-        case .pagingGrid:
-            PagingGridView()
-        }
-    }
-    
 }
