@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct PostModel: Codable, Equatable, Identifiable {
+public struct PostModel: Codable, Equatable, Identifiable, Sendable {
     
     public let id: Int?
     public let userId: Int?

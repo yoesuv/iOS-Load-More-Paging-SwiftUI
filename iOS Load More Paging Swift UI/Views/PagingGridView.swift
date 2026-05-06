@@ -9,11 +9,15 @@ import SwiftUI
 
 struct PagingGridView: View {
     
-    @ObservedObject var viewModel = PagingListViewModel()
+    @ObservedObject var viewModel: PagingListViewModel
     private let columns = [
         GridItem(.flexible(), spacing: 16),
         GridItem(.flexible(), spacing: 16)
     ]
+    
+    init(viewModel: PagingListViewModel = PagingListViewModel()) {
+        _viewModel = ObservedObject(wrappedValue: viewModel)
+    }
     
     var body: some View {
         ScrollView(showsIndicators: false) {
@@ -22,22 +26,35 @@ struct PagingGridView: View {
                     ForEach(viewModel.posts) { post in
                         ItemPostGridView(post: post).onAppear {
                             if viewModel.posts.last == post {
-                                viewModel.fetchPosts(page: viewModel.page)
+                                viewModel.fetchPosts()
                             }
                         }
                     }
                 }
                 .padding(.horizontal, 16)
-                if !viewModel.hasReachedMax {
+                if viewModel.isLoading {
                     ProgressView()
                         .progressViewStyle(.circular)
                         .controlSize(.large)
                         .tint(.teal)
                 }
+                if let errorMessage = viewModel.errorMessage {
+                    VStack(spacing: 8) {
+                        Text(errorMessage)
+                            .font(.caption)
+                            .foregroundStyle(.red)
+                        Button("Retry") {
+                            viewModel.fetchPosts()
+                        }
+                        .font(.caption)
+                        .tint(.teal)
+                    }
+                    .padding()
+                }
             }
         }
         .onAppear {
-            viewModel.fetchPosts(page: viewModel.page)
+            viewModel.fetchPosts()
         }
     }
     

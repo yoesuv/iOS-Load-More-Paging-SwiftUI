@@ -9,7 +9,11 @@ import SwiftUI
 
 struct PagingListView: View {
     
-    @ObservedObject var viewModel = PagingListViewModel()
+    @ObservedObject var viewModel: PagingListViewModel
+    
+    init(viewModel: PagingListViewModel = PagingListViewModel()) {
+        _viewModel = ObservedObject(wrappedValue: viewModel)
+    }
     
     var body: some View {
         ScrollView(showsIndicators: false) {
@@ -17,20 +21,33 @@ struct PagingListView: View {
                 ForEach(viewModel.posts) { post in
                     ItemPostView(post: post).onAppear {
                         if viewModel.posts.last == post {
-                            viewModel.fetchPosts(page: viewModel.page)
+                            viewModel.fetchPosts()
                         }
                     }
                 }
-                if !viewModel.hasReachedMax {
+                if viewModel.isLoading {
                     ProgressView()
                         .progressViewStyle(.circular)
                         .controlSize(.large)
                         .tint(.teal)
                 }
+                if let errorMessage = viewModel.errorMessage {
+                    VStack(spacing: 8) {
+                        Text(errorMessage)
+                            .font(.caption)
+                            .foregroundStyle(.red)
+                        Button("Retry") {
+                            viewModel.fetchPosts()
+                        }
+                        .font(.caption)
+                        .tint(.teal)
+                    }
+                    .padding()
+                }
             }
         }
         .onAppear {
-            viewModel.fetchPosts(page: viewModel.page)
+            viewModel.fetchPosts()
         }
     }
     
